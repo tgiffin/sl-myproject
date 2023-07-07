@@ -1,13 +1,23 @@
-"""
-# My first app
-Here's our first attempt at using data to create a table:
-"""
+# Draw a title and some text to the app:
+'''
+# This is the document title
 
-import streamlit as st
+This is some _markdown_.
+'''
+
 import pandas as pd
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
+df = pd.DataFrame({'col1': [1,2,3]})
+df  # 👈 Draw the dataframe
 
-df
+x = 10
+'x', x  # 👈 Draw the string 'x' and then the value of x
+
+# Also works with most supported chart types
+import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+fig  # 👈 Draw a Matplotlib chart
